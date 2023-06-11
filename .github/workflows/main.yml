@@ -1,0 +1,30 @@
+name: Localization Automation
+
+on:
+  push:
+    paths:
+      - app_en.arb
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          # Install any required dependencies or tools
+
+      - name: Generate localized files
+        run: |
+          # Run your script or command to generate the localized files
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update localized files"
+          git push
